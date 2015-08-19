@@ -16,11 +16,12 @@ case "$HADOOP_MAJOR_VERSION" in
     mv hadoop-1.0.4/ persistent-hdfs/
     ;;
   2)
-    wget http://s3.amazonaws.com/spark-related-packages/hadoop-2.0.0-cdh4.2.0.tar.gz
+    version=2.6.0
+    wget https://s3.eu-central-1.amazonaws.com/wealthport-s3/spark/repo/hadoop-${version}.tar.gz
     echo "Unpacking Hadoop"
     tar xvzf hadoop-*.tar.gz > /tmp/spark-ec2_hadoop.log
     rm hadoop-*.tar.gz
-    mv hadoop-2.0.0-cdh4.2.0/ persistent-hdfs/
+    mv hadoop-${version}/ persistent-hdfs/
 
     # Have single conf dir
     rm -rf /root/persistent-hdfs/etc/hadoop/
