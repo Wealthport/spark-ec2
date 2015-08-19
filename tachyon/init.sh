@@ -43,7 +43,7 @@ else
         wget https://s3.amazonaws.com/Tachyon/tachyon-0.6.4-bin.tar.gz
       elif [[ "$HADOOP_MAJOR_VERSION" == "2" ]]; then
         version=2.6
-        wget https://s3.eu-central-1.amazonaws.com/wealthport-s3/spark/repo/tachyon-$TACHYON_VERSION-hadoop${version}.tar.gz
+        wget https://s3.eu-central-1.amazonaws.com/wealthport-s3/spark/repo/tachyon-$TACHYON_VERSION-hadoop${version}-bin.tar.gz
       else
         wget https://s3.amazonaws.com/Tachyon/tachyon-0.6.4-hadoop2.4-bin.tar.gz
       fi
@@ -53,7 +53,7 @@ else
         wget https://s3.amazonaws.com/Tachyon/tachyon-$TACHYON_VERSION-bin.tar.gz
       elif [[ "$HADOOP_MAJOR_VERSION" == "2" ]]; then
         version=2.6
-        wget https://s3.eu-central-1.amazonaws.com/wealthport-s3/spark/repo/tachyon-$TACHYON_VERSION-hadoop${version}.tar.gz
+        wget https://s3.eu-central-1.amazonaws.com/wealthport-s3/spark/repo/tachyon-$TACHYON_VERSION-hadoop${version}-bin.tar.gz
       else
         wget https://s3.amazonaws.com/Tachyon/tachyon-$TACHYON_VERSION-hadoop2.4-bin.tar.gz
       fi
