@@ -66,7 +66,9 @@ else
   echo "Unpacking Tachyon"
   tar xvzf tachyon-*.tar.gz > /tmp/spark-ec2_tachyon.log
   rm tachyon-*.tar.gz
-  mv `ls -d tachyon-*` tachyon
+  if [[ -d tachyon-* ]]; then
+    mv `ls -d tachyon-*` tachyon
+  fi
 fi
 
 popd > /dev/null
