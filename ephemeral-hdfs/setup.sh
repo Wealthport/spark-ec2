@@ -46,4 +46,6 @@ case "$HADOOP_MAJOR_VERSION" in
      return -1
 esac
 
+$EPHEMERAL_HDFS/bin/hadoop fs -mkdir -p /user/root
+
 popd > /dev/null
