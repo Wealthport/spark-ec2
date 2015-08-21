@@ -46,3 +46,18 @@ and can be used to install any pre-requisites.
       
    e. Modify https://github.com/mesos/spark/blob/master/ec2/spark_ec2.py to add your module to
    the list of enabled modules.
+
+### Generating the archives
+
+Download
+    - hadoop 2.6.0
+    - spark 1.4.1 with hadoop 2.6.0
+
+Get tachyon
+
+    git clone --branch=branch-0.6 tachyon
+    cd tachyon
+    mvn install -Dhadoop.version=2.6.0
+    cd ../ && tar -czf tachyon-0.6.4-hadoop2.6-bin.tar.gz tachyon
+
+Upload the three archive to the S3 storage.
